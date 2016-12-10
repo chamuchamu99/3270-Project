@@ -3,7 +3,6 @@ import java.io.*;
 public class FlightDetails implements Serializable {
 	public String Flight_Num;
 	public String FlightDate;
-	public String Time;
 	public int Num_Of_Seats;
 	public String Source;
 	public String Destination;
@@ -13,10 +12,9 @@ public class FlightDetails implements Serializable {
 	}
 
 //constructor for the flightDetails class
-    public FlightDetails(String fn,String fd, String t, int ns,String s,String d) {
+    public FlightDetails(String fn,String fd, int ns,String s,String d) {
 	    this.Flight_Num = fn;
 	    this.FlightDate = fd;
-	    this.Time = t;
 	    this.Num_Of_Seats = ns;
 	    this.Source = s;
 	    this.Destination =d;
@@ -28,10 +26,6 @@ public class FlightDetails implements Serializable {
 
     public void setFlightDate(String FDate) {	
     	this.FlightDate = FDate;
-    }
-
-    public void setTime(String time) {
-    	this.Time = time;
     }
 
     public void setNumSeats(int seats) {
